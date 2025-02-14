@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe – Web Developer</title>
+    <title>Dipankar Sarkar – Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <style>
         body {
             background-color: #f4f4f4;
@@ -41,8 +43,8 @@
         }
 
         .hero img {
-            width: 150px;
-            border-radius: 50%;
+            width: 25%;
+            border-radius: 10%;
         }
 
         section {
@@ -69,9 +71,14 @@
         table,
         th,
         td {
-            border: 1px solid black;
+            /* border: 1px solid black; */
             padding: 10px;
             text-align: left;
+        }
+
+        table tr td:hover {
+            background-color: #f4f4f4;
+            font-weight: bold;
         }
 
         form {
@@ -86,6 +93,13 @@
             padding: 10px;
         }
 
+        form button {
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
@@ -97,7 +111,7 @@
 
 <body>
     <header>
-        <h1>John Doe – Web Developer</h1>
+        <h1>Dipankar Sarkar – Web Developer</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -110,8 +124,8 @@
     </header>
 
     <section id="home" class="hero">
-        <img src="profile.jpg" alt="Profile Picture">
-        <h2>Hello! I am John Doe, a passionate Web Developer</h2>
+        <img src="C:\Users\HP\Downloads\my pic.png" alt="Profile Picture">
+        <h2>Hello! I am Dipankar Sarkar, a passionate Web Developer</h2>
         <p>Welcome to my personal portfolio webpage.</p>
     </section>
 
@@ -134,7 +148,7 @@
 
     <section id="projects">
         <h2>Projects</h2>
-        <table>
+        <table border="3">
             <tr>
                 <th>Project Name</th>
                 <th>Description</th>
@@ -151,9 +165,10 @@
                 <td>React, Node.js, MongoDB</td>
             </tr>
             <tr>
-                <td><a href="#">Task Manager</a></td>
-                <td>A task management web app.</td>
-                <td>Vue.js, Firebase</td>
+                <td><a href="https://github.com/Dipankar1508/Crop_Fertilizer_Recommendation_ML">Crop and Fertilizer
+                        Recomendation model</a></td>
+                <td>Recomend crop and fertilizer using ML</td>
+                <td>Python, pandas, numpy,etc.</td>
             </tr>
         </table>
     </section>
@@ -162,23 +177,23 @@
         <h2>Contact Me</h2>
         <form>
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="eg. Virat Kholi">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required placeholder="eg. virat18@gmail.com">
 
             <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required placeholder="Type the message "></textarea>
 
             <button type="submit">Submit</button>
         </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <p>&copy; 2025 Dipankar Sarkar. All rights reserved.</p>
         <p>
-            <a href="#">LinkedIn</a> |
-            <a href="#">GitHub</a>
+            <a href="#"><i class="fa-brands fa-linkedin" style="color: #63E6BE;"></i></a> |
+            <a href="https://github.com/Dipankar1508/"><i class="fa-brands fa-github" style="color: #63E6BE;"></i></a>
         </p>
     </footer>
 </body>
