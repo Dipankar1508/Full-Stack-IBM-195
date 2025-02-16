@@ -1,0 +1,167 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #ebd724;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101820;
+    color: white;
+    /* padding-right: 10px; */
+    width: 100vw;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+h4 {
+    margin-left: 10px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    position: relative;
+    right: 10px;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.menu ul li {
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.magic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    border: 2px solid white;
+    margin: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    background: linear-gradient(to right, #f19647, #f5f10a);
+}
+
+
+.box1:hover {
+    background-image: url("https://static.toiimg.com/thumb/msid-94353766,width-1280,height-720,resizemode-4/94353766.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 25px #f6f6f8;
+    transform: scale(1.1);
+    color: transparent;
+    transition: all 0.7s ease-out;
+}
+
+
+.box1:active {
+    border-radius: 10px;
+}
+
+
+.box2:hover {
+    background-image: url("https://images.thequint.com/thequint%2F2017-06%2F4b4eb83d-21f4-46b1-8261-394bd25304cb%2FviratFunnyface.jpg?rect=0%2C159%2C4245%2C2229");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 25px #f6f6f8;
+    transform: scale(1.1);
+    color: transparent;
+    transition: all 0.7s ease-out;
+}
+
+.box2:active {
+    border-radius: 10px;
+}
+
+.box3:hover {
+    background-image: url("https://c.ndtvimg.com/2023-10/qisava48_suryakumar-yadav_625x300_10_October_23.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 25px #f6f6f8;
+    transform: scale(1.1);
+    color: transparent;
+    transition: all 0.7s ease-out;
+}
+
+.box3:active {
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #101820;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+
+    .magic {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 150px;
+        height: 150px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        width: 100vw;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
