@@ -75,8 +75,12 @@ h4 {
     background-position: center;
     box-shadow: 10px 10px 25px #f6f6f8;
     transform: scale(1.1);
-    color: transparent;
+    /* color: transparent; */
     transition: all 0.7s ease-out;
+
+    p {
+        display: none;
+    }
 }
 
 
@@ -91,8 +95,12 @@ h4 {
     background-position: center;
     box-shadow: 10px 10px 25px #f6f6f8;
     transform: scale(1.1);
-    color: transparent;
+    /* color: transparent; */
     transition: all 0.7s ease-out;
+
+    p {
+        display: none;
+    }
 }
 
 .box2:active {
@@ -105,8 +113,12 @@ h4 {
     background-position: center;
     box-shadow: 10px 10px 25px #f6f6f8;
     transform: scale(1.1);
-    color: transparent;
+    /* color: transparent; */
     transition: all 0.7s ease-out;
+
+    p {
+        display: none;
+    }
 }
 
 .box3:active {
