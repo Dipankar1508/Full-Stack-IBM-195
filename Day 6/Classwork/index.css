@@ -4,8 +4,9 @@
     width: 100%;
     height: 200px;
     border: 2px solid red;
-    /* position: relative;
-    top: 10px; */
+    position: relative;
+    /* top: 10px; */
+    display: inline-block;
 }
 
 .child {
@@ -20,35 +21,29 @@
     bottom: 0;
 }
 
-.child>div {
-    background-color: rgb(219, 24, 138);
-    border: 2px solid red;
+.image {
     height: 50px;
     width: 50px;
-    position: fixed;
-    right: 30px;
-    bottom: 10px;
     border-radius: 50%;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
 }
 
 .box {
-    width: 150px;
-    height: 150px;
-    border: 2px solid green;
-    background-color: grey;
-    /* display: none; */
-    /* visibility: hidden; */
+    height: 100px;
+    width: 100px;
+    background-color: rgb(214, 175, 175);
     position: fixed;
-    right: 30px;
-    bottom: 80px;
-    z-index: 2;
+    bottom: 70px;
+    right: 10px;
+    display: none;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.im:hover {
-    .box {
-        /* visibility: visible !important; */
-        display: block;
-    }
+.image:hover~.box {
+    display: block;
 }
 
 .stick {
