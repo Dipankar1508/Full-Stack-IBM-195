@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* <!-- Selectors --> */
+
+        p {
+            background-color: teal;
+            text-align: center;
+        }
+
+        .para {
+            background-color: red;
+        }
+
+        #paraID {
+            background-color: yellowgreen;
+        }
+
+        /* Desecent Selectors */
+        #par li {
+            background-color: yellow;
+        }
+
+        /* Child Selectors */
+        #par2>li {
+            background-color: rgb(228, 141, 10);
+        }
+
+        /* Adjacent sibling selectors */
+        #par3>:nth-child(3)+p {
+            background-color: rgb(228, 141, 10);
+        }
+
+        #par4>div>#hi~h4 {
+            background-color: rgb(228, 141, 10);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Selectors -->
+    <div>
+        <p>I am a Paragraph 1</p>
+    </div>
+    <div>
+        <p>I am a Paragraph 2</p>
+    </div>
+    <div>
+        <p class="para">I am a Paragraph 3</p>
+    </div>
+    <div>
+        <p class="para" id="paraID">I am a Paragraph 4</p>
+    </div>
+    <hr>
+    <!-- Combinators -->
+
+    <!-- Desecent Selectors , child selectors , adjacent sibling selectors , general sibling selectors -->
+    <li>
+        Desecent Selectors
+    </li>
+    <div id="par">
+        <li>
+            I am a Paragraph 1
+        </li>
+        <li>
+            I am a Paragraph 1
+        </li>
+        <div>
+            <p>I am in the class</p>
+            <div>
+                <p>I am doing the class</p>
+                <p>I am doing exercise</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <li>
+        Child Selectors
+    </li>
+    <div id="par2">
+        <li>
+            I am a Paragraph 1
+        </li>
+        <li>
+            I am a Paragraph 1
+        </li>
+        <div>
+            <p>I am in the class</p>
+            <div>
+                <p>I am doing the class</p>
+                <p>I am doing exercise</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Adjacent sibling selectors -->
+    <!-- Single element selector -->
+    <li>
+        Adjacent sibling selectors
+    </li>
+
+    <div id="par3">
+        <p>I am in the class</p>
+        <h4>
+            Lets play cricket
+        </h4>
+        <p>I am doing the class</p>
+        <p>I am doing exercise</p>
+        <div>
+            <h4>Lets play cricket</h4>
+        </div>
+    </div>
+    <hr>
+    <!-- General sibling selectors -->
+    <li>
+        General sibling selectors
+    </li>
+
+    <div id="par4">
+        <p>I am in the class</p>
+        <h4>
+            Lets play cricket
+        </h4>
+        <p>I am doing the class</p>
+        <p>I am doing exercise</p>
+        <div>
+            <h4 id="hi">Lets play cricket</h4>
+            <h4>Lets play cricket</h4>
+            <p>
+                Chess is fine to play
+            </p>
+            <h4>Lets play cricket</h4>
+
+        </div>
+    </div>
+</body>
+
+</html>

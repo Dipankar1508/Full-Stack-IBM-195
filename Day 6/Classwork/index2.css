@@ -1,0 +1,48 @@
+p {
+    border: 2px solid red;
+    width: 100px;
+    /* height: 100px; */
+}
+
+.btn:hover {
+
+    border-color: blue;
+    background-color: yellow;
+}
+
+.form {
+    border: 1px solid black;
+    height: 200px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+input:focus {
+    background-color: aquamarine;
+}
+
+button {
+    background-color: chartreuse;
+}
+
+.para::after {
+    content: "This is a paragraph";
+    font-size: 16px;
+    color: blue;
+}
+
+.para::before {
+    content: "This is another paragraph";
+    font-size: 16px;
+    color: green;
+
+}
