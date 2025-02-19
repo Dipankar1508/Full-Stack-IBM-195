@@ -1,0 +1,137 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    border-bottom: 0.2px solid rgb(226, 225, 225);
+    position: sticky;
+    top: 0;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 7%;
+    /* margin: 5px; */
+}
+
+.menu li {
+    list-style: none;
+    /* width: auto; */
+}
+
+nav .menu .logo img {
+    width: 200px;
+    height: 50%;
+}
+
+select {
+    border: none;
+}
+
+.download {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.download .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 5, 138);
+    border-radius: 17px;
+    padding: 2px;
+    height: 30px;
+    color: white;
+    position: relative;
+    top: 5px;
+    width: 80px;
+}
+
+/* Conatiner */
+.container .first {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(210, 241, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .second {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(241, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second .card {
+    height: 80%;
+    width: 35%;
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 15px;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.offer {
+    width: 95%;
+    background-color: rgb(35, 200, 241);
+    position: relative;
+    bottom: 5px;
+    border-radius: 15px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.offer .small {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer .button {
+    border-radius: 8px;
+    border: 0.5px solid #254b66;
+    height: 2rem;
+    padding: 2px;
+    width: 30%;
+}
