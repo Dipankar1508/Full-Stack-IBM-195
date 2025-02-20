@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 20px;
+}
+
+:root {
+    --secondary-color: rgb(50, 76, 88);
+}
+
+.container {
+    border: 5px solid rgb(87, 61, 61);
+    width: 35%;
+    height: 70vh;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(182, 176, 169);
+}
+
+.screen {
+    width: 98%;
+    border: 2px solid black;
+    height: 15vh;
+    border-radius: 10px;
+}
+
+.first {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 98%;
+}
+
+.second {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    width: 98%;
+}
+
+.btn {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn14 {
+    grid-area: 3/4/5/5;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn:hover {
+    background-color: grey;
+}
+
+.first>button:nth-child(1) {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.first>button:nth-child(1):hover {
+    background-color: gray;
+}
+
+.btn5 {
+    background-color: var(--secondary-color);
+    color: white;
+}
