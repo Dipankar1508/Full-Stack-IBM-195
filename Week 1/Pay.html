@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay to any UPI</title>
+    <link rel="stylesheet" href="pay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <img src="Paytm.png" alt="logo">
+            </div>
+            <li>Ticket Booking<select>
+                    <option></option>
+                </select></li>
+            <li>Recharge and Bills<select>
+                    <option></option>
+                </select></li>
+            <li>Payment and Serivices<select>
+                    <option></option>
+                </select></li>
+            <li>Paytm for Business<select>
+                    <option></option>
+                </select></li>
+            <li>Company<select>
+                    <option></option>
+                </select></li>
+            &emsp;
+            &emsp;
+            <div class="download">
+                <div class="app"><i class="fa-solid fa-download"></i>
+                    &nbsp;
+                    <p>Download App</p>
+                </div>
+                &emsp;
+                <div class="login">
+                    <i class="fa-solid fa-circle-user" style="color: #74C0FC; font-size: large;"></i>
+                    &nbsp;
+                    &nbsp;
+                    <p style="font-size: small;">Sign in</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="section1">
+            <div class="pre-first">
+                <div class="location">
+                    <div class="transport">
+                        <div class="mode">
+                            <li><i class="fa-solid fa-plane fa-lg"></i>&nbsp;Flights</li>
+                            <li><i class="fa-solid fa-bus-simple fa-lg"></i>&nbsp;Bus</li>
+                            <li><i class="fa-solid fa-train-subway fa-lg"></i>&nbsp;Train</li>
+                            <li><i class="fa-solid fa-plane-departure fa-lg"></i>Intl. Flights</li>
+                        </div>
+                        <div class="mode-img">
+                        </div>
+                    </div>
+                    <div class="ticket">
+                        <div class="line1">
+                            <input type="radio" id="one-way" name="trip-type">
+                            <label for="one-way">One Way</label>
+                            <input type="radio" id="round-trip" name="trip-type">
+                            <label for="round-trip">Round Trip</label>
+                        </div>
+                        <br>
+                        <div class="line2">
+                            <li>
+                                <p style="color: grey; font-size: small; margin: 8px 0;">From</p>
+                                <h3>Delhi(DEL)</h3>
+                            </li>
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            <li>
+                                <div class="interchange">
+                                    <i class="fa-solid fa-right-left fa-lg" style="color: #00Baf2;"></i>
+                                </div>
+                                <div class="return">
+                                    <p style="color: grey; font-size: small; margin: 8px 0;">To</p>
+                                    <h3>Mumbai(BOM)</h3>
+                                </div>
+                            </li>
+                            &emsp;
+                            &emsp;
+                            &emsp;
+                            <li style="border-left: 0.5px solid rgb(204, 203, 203);padding: 0 0 0 10px;">
+                                <p style="color: grey; font-size: small; margin: 8px 0;">Depart</p>
+                                <h3>Thu,27 Feb 2025</h3>
+                            </li>
+                            <li style="border-left: 0.5px solid rgb(204, 203, 203);padding: 0 0 0 10px;">
+                                <p style="color: grey; font-size: small; margin: 8px 0;">Return</p>
+                                <h3 style="color: #00Baf2;">Choose Date <i class="fa-solid fa-circle-xmark fa-lg"
+                                        style="color: grey;"></i>
+                                </h3>
+                            </li>
+                            <li style="border-left: 0.5px solid rgb(204, 203, 203);padding: 0 0 0 10px;">
+                                <p style="color: grey; font-size: small; margin: 8px 0;">Passenger and Class</p>
+                                <h3>1 Traveller, Economy <select name="" id=""></select></h3>
+                            </li>
+                            <button>Select Flights</button>
+                        </div>
+                        <hr>
+                        <div class="line3">
+                            <div class="fare">
+                                <p style="margin: 5px;">Special Fares (optional)</p>
+                                <p style="color: #27ae62; font-size: small;font-weight: bold; margin: 5px;"><i
+                                        class="fa-solid fa-indian-rupee-sign fa-sm"></i> Extra
+                                    Savings</p>
+                            </div>
+                            <div class="category">
+                                &emsp;
+                                <div class="box">
+                                    <p style="font-weight: bold;">Armed Forces</p>
+                                    <p>Upto ₹600 off</p>
+                                </div>
+                                &emsp;
+                                <div class="box">
+                                    <p style="font-weight: bold;">Student</p>
+                                    <p>Extra Baggage</p>
+                                </div>
+                                &emsp;
+                                <div class="box">
+                                    <p style="font-weight: bold;">Senior Citizen</p>
+                                    <p>Upto ₹600 off</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="first">
+                <div class="location-img">
+                    <i class="fa-solid fa-circle-left" style="color: #458fc7;font-size: 35px; z-index: 1;"></i>
+                    &emsp;
+                    <div class="img1" style="height: 125px; width: 375px;"></div>
+                    &emsp;
+                    <div class="img2" style="height: 125px; width: 375px;"></div>
+                    &emsp;
+                    <i class="fa-solid fa-circle-right" style="color: #458fc7;font-size: 35px; z-index: 1;"></i>
+                </div>
+            </div>
+            <div class="second">
+                <div class="card card1">
+                    <div class="one">
+                        <h4>Recharge</h4>
+                    </div>
+                    <div class="two">
+                        <span>
+                            <i class="fa-solid fa-mobile fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>Mobile Recharge</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-satellite-dish fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>DTH Recharge</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-car fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>FasTag Recharge</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-arrow-right fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>
+                                View All Products
+                            </p>
+                        </span>
+                    </div>
+                    <div class="three">
+                        <div class="offer">
+                            <div class="small">
+                                <i class="fa-solid fa-mobile fa-2xl" style="color: #254b66;"></i>
+                            </div>
+                            &nbsp;
+                            &nbsp;
+                            <p>Do <strong>Mobile Recharge</strong> and Win ₹100
+                                <br>cashback. Promo: <strong>TAKEITALL</strong>
+                            </p>
+                            &nbsp;
+                            <button class="button">Recharge
+                                Now
+                                →</button>
+                        </div>
+                    </div>
+                </div>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <div class=" card card2">
+                    <div class="one">
+                        <h4>Bill Payments</h4>
+                    </div>
+                    <div class="two">
+                        <span>
+                            <i class="fa-solid fa-credit-card fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>Credit Card Payments</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-lightbulb fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>Electric Bill</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-wifi fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>Broad Band Bill</p>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-arrow-right fa-2xl" style="color: #254b66;"></i>
+                            <br>
+                            <p>
+                                View All Products
+                            </p>
+                        </span>
+                    </div>
+                    <div class="three">
+                        <div class="offer" style="background-color: #2f95e4;">
+                            <div class="small">
+                                <i class="fa-solid fa-wifi fa-2xl" style="color: #254b66;"></i>
+                            </div>
+                            &nbsp;
+                            &nbsp;
+                            <p><strong>BroadBand Recharge</strong>
+                                <br>Bill due? Pay now & get rewarded
+                            </p>
+                            &nbsp;
+                            &nbsp;
+                            <button class="button">Pay
+                                Now
+                                →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section2" style="padding-top: 2rem;">
+            <div class="aboutPay">
+                <div class="about">
+                    <div class="first">
+                        <img src="Paytm_Money_Logo.png" alt="" height="3%" width="30%">
+                    </div>
+                    <div class="second">
+                        <h1>Build Long-term Wealth & Achieve your Goals.</h1>
+                        <p>Investing on Paytm Money is transparent, low-cost and commission-free. Buy stocks & mutual
+                            funds that can help you
+                            create wealth & realise your dreams.</p>
+                    </div>
+                    <div class="third">
+                        <p><a href="#">Learn More →</a></p>
+                    </div>
+                </div>
+                <div class="aboutimg ">
+                    <img src="thirdmain.avif" alt="" width="80%">
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="help">
+                <div class="help-img">
+                    <img src="miniUPI.png" alt="mni upi" height="50px" width="50px">
+                    &emsp;
+                    <div class="help-text">
+                        <p>24x7 Trusted Customer Support to assist and help you in every step of your journey</p>
+                    </div>
+                </div>
+                <div class="help-learn">
+                    <p><a href="#">Learn More →</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="bigCard1" style="width:38%">
+                <div class="first">
+                    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2832350/1725363772575.png"
+                        alt="credit card" width="30%">
+                </div>
+                <div class="second">
+                    <h1>One destination for Credit Cards</h1>
+                    <p>Paytm HDFC, SBI & Axis Bank Credit Card with
+                        <br>assured Cashback and incredible offers.
+                    </p>
+                </div>
+                <div class="third">
+                    <p><a href="#">Appy Now →</a></p>
+                    &emsp;
+                    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/1726056573080.png" alt=""
+                        width="20%" height="20%">
+                </div>
+                <div class="creditCard">
+                    <img src="cards.avif" alt="" width="80%">
+                </div>
+            </div>
+            &emsp;
+            &emsp;
+            <div class="bigCard2" style="width:38%">
+                <div class="first">
+                    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2834804/1725623952233.png"
+                        alt="credit card" width="30%">
+                </div>
+                <div class="second">
+                    <h1>Insurance made easy.</h1>
+                    <p>Buying insurance does not have to be tedious, time-consuming & confusing. Paytm Insurance removes
+                        the worry of getting
+                        insured by making it simple, convenient & easy-to-understand.
+                    </p>
+                </div>
+                <div class="third">
+                    <p><a href="#">Get It Now →</a></p>
+                </div>
+                <div class="creditCard">
+                    <img src="cards-2.avif" alt="" width="80%">
+                </div>
+            </div>
+        </div>
+        <div class="section5" style="padding-top: 2rem;">
+            <div class="aboutPay">
+                <div class="about">
+                    <div class="first">
+                        <img src="Paytm.png" alt="" height="2%" width="50%">
+                    </div>
+                    <div class="second">
+                        <h1>Pay any one directy from your bank account</h1>
+                        <p>Pay anyone ,everywhere. Make contactless & secure payments in-store or onlines using Paytm
+                            UPI or
+                            Directly from your Bank Account. Plus, send & receive money from anyone</p>
+                    </div>
+                    <div class="third">
+                        <div class="apple box">
+                            <i class="fa-brands fa-apple fa-2xl" style="color: #ffffff;font-size: 3rem;"></i>
+                            &emsp;
+                            <span>
+                                <p>
+                                    Download on the
+                                </p>
+                                <h2>App Store</h2>
+                            </span>
+                        </div>
+                        &emsp;
+                        <div class="playstore box">
+                            <i class="fa-brands fa-google-play fa-2xl" style="color: #ffffff;font-size: 3rem;"></i>
+                            &emsp;
+                            <span>
+                                <p>
+                                    Get it on
+                                </p>
+                                <h2>Play Store</h2>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutimg ">
+                    <img src="SecondMain.png" alt="" width="80%">
+                </div>
+            </div>
+        </div>
+        <div class="section6">
+            <div class="aboutPay">
+                <div class="about">
+                    <div class="first">
+                        <img src="paytmBusiness.png" alt="" height="3%" width="20%">
+                    </div>
+                    <div class="second">
+                        <h1>Accept payments online & offline</h1>
+                        <p>Millions of small & big businesses use Paytm to accept payments anywhere any time with a wide
+                            range of solutions for all
+                            kind of merchants</p>
+                    </div>
+                    <div class="third">
+                        <p><a href="#">Learn More →</a></p>
+                    </div>
+                </div>
+                <div class="aboutimg ">
+                    <img src="section6MAINPIC.avif" alt="" width="80%">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Invester Relationship</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;More About Paytm</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Company</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Important Updates</p>
+        </div>
+        <div class="invester">
+            <p>Carrer</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Recharge & pay bills</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Book Travel & Entertainment</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Investments & Miscellaneous</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Loans and Credit Cards</p>
+        </div>
+        <div class="invester">
+            <p>+ &nbsp;&nbsp;Financial Tools & Calculators</p>
+        </div>
+        <br><br>
+        <hr style="color: black; margin: 0px; border: 1px solid rgb(131, 130, 130); display: block;">
+        <span class="last">
+            <div class="lastA">
+                © 2025 Paytm
+            </div>
+            <div class="lastB">Follow Us
+                &emsp;
+                <i class="fa-brands fa-facebook-f"></i>
+                &nbsp;
+                <i class="fa-brands fa-x-twitter"></i>
+                &nbsp;
+                <i class="fa-brands fa-youtube"></i>
+                &nbsp;
+                <i class="fa-brands fa-linkedin-in"></i>
+                &nbsp;
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </span>
+
+    </footer>
+    <div class="aa" style="width: 100%;height: 0.5rem;background-color: #00Baf2;"></div>
+    <div class="bb" style="width: 100%;height: 0.5rem;background-color: #002970;"></div>
+
+</body>
+
+
+</html>

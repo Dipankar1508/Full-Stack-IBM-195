@@ -18,20 +18,20 @@ body {
     padding: 50px;
 }
 
-.first {
+.about .first {
     position: relative;
     bottom: 1rem;
 }
 
-.second p {
+.about .second p {
     font-size: 18px;
 }
 
-.third {
+.about .third {
     display: flex;
 }
 
-.box {
+.about .third .box {
     width: 35%;
     height: 10vh;
     background-color: black;

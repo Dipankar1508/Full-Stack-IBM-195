@@ -1,0 +1,550 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.root {
+    --primary-color: #f7f9fc;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    border-bottom: 0.2px solid rgb(226, 225, 225);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 7%;
+    /* margin: 5px; */
+}
+
+.menu li {
+    list-style: none;
+    font-weight: bold;
+    /* width: auto; */
+}
+
+nav .menu .logo img {
+    width: 180px;
+    height: 45%;
+}
+
+select {
+    border: none;
+}
+
+.download {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    color: #002970;
+    font-weight: bold;
+}
+
+.download .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 5, 138);
+    border-radius: 17px;
+    padding: 2px;
+    height: 30px;
+    color: white;
+    position: relative;
+    top: 5px;
+    width: 80px;
+}
+
+/* Conatiner */
+
+/*section1*/
+.container {
+    background-color: rgb(241, 240, 240);
+}
+
+.container .section1 .pre-first {
+    background-color: #E8F8ED;
+    padding: 0.5rem 9rem;
+}
+
+.container .section1 .first {
+    /* height: 50vh; */
+    /* width: 100%; */
+    padding: 2.5rem;
+    background-color: #E8F8ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .section1 .pre-first .location .transport {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.container .section1 .pre-first .location {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container .section1 .pre-first .location .transport .mode {
+    display: flex;
+
+    li {
+        list-style: none;
+        padding: 20px 30px 17px 0;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    li:hover {
+        border-bottom: 2px solid #00baf2;
+    }
+}
+
+.container .section1 .pre-first .location .transport .mode-img {
+    background-image: url(https://paytmtravel-images-akamai.paytm.com/icons/Paytm_Travel_Logo.svg);
+    background-size: cover;
+    height: 25px;
+    width: 170px;
+}
+
+.container .section1 .pre-first .location .ticket {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 0.5px solid rgb(224, 224, 224);
+    border-radius: 15px;
+}
+
+.container .section1 .pre-first .location .ticket .line2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+        list-style: none;
+    }
+}
+
+.container .section1 .pre-first .location .ticket .line2 li:nth-child(2) {
+    display: flex;
+
+}
+
+.container .section1 .pre-first .location .ticket .line2 li .interchange {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    bottom: 25px;
+    right: 1rem;
+
+}
+
+.container .section1 .pre-first .location .ticket .line2 button {
+    background-color: #00baf2;
+    border: none;
+    padding: 0.9rem 1.2rem;
+    color: white;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.container .section1 .pre-first .location .ticket .line3 {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.container .section1 .pre-first .location .ticket .line3 .category {
+    display: flex;
+}
+
+.container .section1 .pre-first .location .ticket .line3 .category .box {
+    padding: 0.5rem;
+    border: 1px solid rgb(231, 230, 230);
+    border-radius: 10px;
+
+    p {
+        margin: 5px;
+    }
+}
+
+.container .section1 .first .location-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .section1 .first .location-img .img1 {
+    background-image: url(https://assetscdn1.paytm.com/images/catalog/view_item/2890666/10903120897665220.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.container .section1 .first .location-img .img2 {
+    background-image: url(https://assetscdn1.paytm.com/images/catalog/view_item/2890665/10903092620102442.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.container .section1 .second {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(241, 240, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 .second .card {
+    height: 80%;
+    width: 35%;
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 15px;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.offer {
+    width: 95%;
+    background-color: rgb(35, 200, 241);
+    position: relative;
+    bottom: 5px;
+    border-radius: 15px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.offer .small {
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer .button {
+    border-radius: 8px;
+    border: 0.5px solid #254b66;
+    height: 2rem;
+    padding: 2px;
+    width: 30%;
+}
+
+/* section 2 */
+.section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section2 .aboutPay .about .third p {
+    background: #002970;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-weight: bolder;
+    border-radius: 20px;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+/* Section 3 */
+.section3 {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}
+
+.section3 .help {
+    padding: 7px 25px;
+    width: 84%;
+    display: flex;
+    background-color: #002970;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.section3 .help .help-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .help .help-text {
+    p {
+        font-weight: bolder;
+        font-size: large;
+    }
+}
+
+.section3 .help .help-learn p {
+    background: #002970;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 1px solid white;
+    position: relative;
+    right: 0;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+/* Section 4 */
+.section4 {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+
+}
+
+.bigCard1 {
+    background: url(https://assetscdn1.paytm.com/images/catalog/view_item/1725638720587.png);
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    /* border: 2px solid white; */
+    border-radius: 15px;
+}
+
+.section4 .bigCard1 .third {
+    display: flex;
+    align-items: center;
+}
+
+.section4 .bigCard1 .third p {
+    background: transparent;
+    padding: 0.8rem 1.5rem;
+    font-weight: bolder;
+    border: 2px solid #002970;
+    border-radius: 20px;
+
+    a {
+        color: #002970;
+        text-decoration: none;
+    }
+}
+
+.section4 .bigCard1 .creditCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bigCard2 {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.section4 .bigCard2 .third {
+    display: flex;
+    align-items: center;
+}
+
+.section4 .bigCard2 .third p {
+    background: transparent;
+    padding: 0.8rem 1.5rem;
+    font-weight: bolder;
+    border: 2px solid #002970;
+    border-radius: 20px;
+
+    a {
+        color: #002970;
+        text-decoration: none;
+    }
+}
+
+.section4 .bigCard2 .creditCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Section 5 */
+.section5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.aboutPay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 80%;
+    background-color: white;
+    border: 2px solid rgba(228, 226, 226, 0.61);
+    border-radius: 15px;
+    padding: 50px;
+}
+
+.about .first {
+    position: relative;
+    bottom: 1rem;
+}
+
+.about .second p {
+    font-size: 18px;
+}
+
+.about .third {
+    display: flex;
+}
+
+.about .third .box {
+    width: 35%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.aboutimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.box span p {
+    margin: 2px;
+    font-size: 14px;
+    word-spacing: 5px;
+}
+
+.box span h2 {
+    margin: 3px;
+}
+
+/* Section 6 */
+.section6 {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.section6 .aboutPay .about .third p {
+    background: #002970;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-weight: bolder;
+    border-radius: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Footer */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 5rem;
+    font-size: medium;
+    color: rgb(97, 96, 96);
+    font-weight: bold;
+    gap: 30px;
+
+    div {
+        display: flex;
+        gap: 15px;
+
+        p {
+            margin: 5px;
+        }
+    }
+}
+
+footer>div::after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 0.5px solid rgb(131, 130, 130);
+    position: relative;
+    bottom: 8px;
+
+}
+
+.last {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.last .lastB {
+    display: flex;
+    align-items: center;
+
+    i {
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        padding: 5px;
+    }
+}
