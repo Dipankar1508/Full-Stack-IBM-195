@@ -1,1 +1,11 @@
 # Paytm Clone Design
+![image](https://github.com/user-attachments/assets/18181394-14ca-40c3-ac63-f32420397b56)
+![image](https://github.com/user-attachments/assets/a2c00f6a-8736-41e3-a284-643674e0c295)
+![image](https://github.com/user-attachments/assets/f4111405-2577-4ece-8e27-f0ec0cd1d7c6)
+![image](https://github.com/user-attachments/assets/949345f0-a4df-49a6-be58-a53b8f2d4a82)
+![image](https://github.com/user-attachments/assets/0599ab2f-b896-4040-89d6-aa343717a2c9)
+![image](https://github.com/user-attachments/assets/f2ddd222-f52d-4f3e-98a7-f4097f745698)
+![image](https://github.com/user-attachments/assets/d0915faa-c48a-4d14-8d0f-b516434910a3)
+![image](https://github.com/user-attachments/assets/98832bc7-a1ec-42d8-a1a1-8018ca43b031)
+![image](https://github.com/user-attachments/assets/0ad487b2-c751-4d01-952a-0de90d89928c)
+![image](https://github.com/user-attachments/assets/d03644de-31c3-4dfb-819a-169062122f73)
