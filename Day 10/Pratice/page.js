@@ -25,3 +25,4 @@ console.log(arr); // Output: [1, 4, 5]
 // Add elements without removing any
 arr.splice(1, 0, 'x', 'y');
 console.log(arr); // Output: [1, 'x', 'y', 4, 5]
+
