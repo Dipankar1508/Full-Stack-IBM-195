@@ -1,0 +1,52 @@
+body {
+    background-image: url(https://www.wearegecko.co.uk/media/50316/mountain-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#parent {
+    width: 45%;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    box-shadow: rgb(160, 161, 161) 0px 20px 30px -10px;
+}
+
+input {
+    width: 87%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(144, 227, 238);
+    border: 2px solid white;
+}
+
+button:hover {
+    color: azure;
+    background-color: burlywood;
+}
+
+.data table {
+    color: white;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    width: 50%;
+    text-align: center;
+}

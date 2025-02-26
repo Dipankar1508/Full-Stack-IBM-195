@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Movie List</h2>
+        <input type="text" id="search" placeholder="Search by Name or Genre" onkeyup="searchMovies()">
+        <button onclick="sortMovies()">Sort by Rating</button>
+        <button onclick="window.location.href='index.html'">Back to Home</button>
+
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Movie Name</th>
+                    <th>Description</th>
+                    <th>Year</th>
+                    <th>IMDb Rating</th>
+                    <th>Genre</th>
+                    <th>Poster</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="movieTable"></tbody>
+        </table>
+        <p id="noMoviesMessage">No movies added yet!</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
