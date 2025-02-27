@@ -5,4 +5,4 @@
 ![image](https://github.com/user-attachments/assets/f1d0d8e5-4095-406d-a2ab-771f281d7922)
 ![image](https://github.com/user-attachments/assets/0104bb99-9df4-4ab5-8b67-3cdad7ccbad4)
 
-# Card.html
+# Cart.html
