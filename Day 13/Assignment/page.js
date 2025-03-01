@@ -188,7 +188,7 @@ function showData(data) {
         });
     }
 }
-showData(data)
+// showData(data)
 /* Sort */
 let sort = document.querySelector('#sort')
 sort.addEventListener("change", () => {
@@ -227,7 +227,13 @@ search.addEventListener('input', () => {
         return item.name.toLowerCase().includes(query);
     });
     main.innerHTML = "";
-    showData(searchValue);
+    if (searchValue.length === 0) {
+        main.innerHTML = "<p>No items found.</p>";
+    }
+    else {
+        showData(searchValue);
+    }
+
 });
 
 /* Cart */
