@@ -38,30 +38,21 @@ nav {
     }
 }
 
-.section {
-    margin-top: 3rem;
-    padding: 10px;
-}
-
-#filter,
-#sort,
-#search {
-    width: 10rem;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid gray;
-}
-
-.main {
+.container {
     width: 100%;
-    background-color: bisque;
+    background-color: rgb(244, 248, 17);
     padding: 10px;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
 }
 
 .item {
-    /* width: calc(25% - 25px); */
+    border: 1px solid rgb(204, 203, 203);
+    text-align: center;
     margin: 10px;
     background-color: white;
     padding: 15px;
@@ -72,7 +63,7 @@ nav {
     button {
         margin-top: 10px;
         padding: 5px 10px;
-        background-color: bisque;
+        background-color: rgb(244, 248, 17);
         color: black;
         border-radius: 5px;
         cursor: pointer;
@@ -82,7 +73,7 @@ nav {
 }
 
 .item button:hover {
-    background-color: rgb(250, 153, 173);
+    background-color: rgb(147, 209, 47);
     color: white;
 }
 
@@ -96,5 +87,7 @@ footer {
     color: white;
     padding: 10px;
     text-align: center;
+    position: relative;
+    bottom: 0;
 
 }

@@ -28,7 +28,7 @@ let data = [
 // data.sort((a, b) => {
 //     return a.price - b.price;
 // })
-data.sort((a, b) => {
+/*data.sort((a, b) => {
     let nameA = a.name.toUpperCase();
     let nameB = b.name.toUpperCase();
     if (nameA < nameB) {
@@ -38,4 +38,10 @@ data.sort((a, b) => {
         return 1;
     }
 })
-console.log(data)
+console.log(data)*/
+
+// OR
+
+// data.sort((a, b) => a.name.localeCompare(b.name)); // Dictionary Ordering    
+data.sort((a, b) => b.name.localeCompare(a.name)); // Oppsites Dictionary Ordering
+console.log(data);

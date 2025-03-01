@@ -22,18 +22,27 @@
     <!-- main section -->
     <div class="cont">
         <div class="section">
-            <div class="filter">
-                <h2>Filter By : </h2>
-                <button id="btn1">Sort By price</button>
-                <button id="btn2">Sort By Category</button>
-                <button id="btn3">Sort By Name</button>
-            </div>
+            <input type="text" placeholder="Serach" id="search">
+            <select name="" id="sort">
+                <option value="Select">Sort</option>
+                <option value="asc">A - Z</option>
+                <option value="des">Z - A</option>
+            </select>
+            <select name="" id="filter">
+                <option value="Fashion" name="Fashion">Fashion</option>
+                <option value="Wearable" name="Wearable">Wearable</option>
+                <option value="Electronics" name="Electronics">Electronics</option>
+                <option value="Accessories name=" Accessories>Accessories</option>
+            </select>
         </div>
         <div class="main">
         </div>
     </div>
+    <footer>
+        <p>&copy; Dipankar Sarkar - All rights reserved</p>
+    </footer>
 
-    <script src="page.js"></script>
 </body>
 
 </html>
+<script src="page.js"></script>

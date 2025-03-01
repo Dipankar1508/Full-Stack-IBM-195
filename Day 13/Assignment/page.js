@@ -162,95 +162,113 @@ let data = [
 ]
 
 let main = document.querySelector(".main");
+let container = document.querySelector(".container");
 
+if (main) {
+    showData(data);
+}
 
-data.forEach((item, index) => {
-    let div = document.createElement("div");
-    div.classList.add("item");
-    div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" width="200px">
-            <h3>${item.name}</h3>
-            <p>$${item.price}</p>
-            <p>Rating: ${item.rating}</p>
-            <button onclick="addToCart(${item.id})">Add to Cart</button>
-        `;
-    main.appendChild(div);
-});
+if (container) {
+    getItem();
+}
+function showData(data) {
+    if (main) {
+        data.forEach((item, index) => {
+            let div = document.createElement("div");
+            div.classList.add("item");
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" width="200px">
+                <h3>${item.name}</h3>
+                <p>${item.category}</p>
+                <p>$${item.price}</p>
+                <p>Rating: ${item.rating}</p>
+                <button onclick="addToCart(${index})">Add to Cart</button>
+            `;
+            main.appendChild(div);
+        });
+    }
+}
+showData(data)
+/* Sort */
+let sort = document.querySelector('#sort')
+sort.addEventListener("change", () => {
+    let value = sort.value;
+    // console.log(value);
+    if (value == "asc") {
+        let sortedData = data.sort((a, b) => {
+            return a.name.localeCompare(b.name);
+        })
+        main.innerHTML = "";
+        showData(sortedData);
+    }
+    if (value == "des") {
+        let sortedData = data.sort((a, b) => {
+            return b.name.localeCompare(a.name);
+        })
+        main.innerHTML = "";
+        showData(sortedData);
+    }
+})
 
-let button1 = document.querySelector("#btn1").addEventListener("click", () => {
-    data.sort((a, b) => {
-        return a.price - b.price;
-    });
-
-    // Clear the main container
+/* Filter */
+let filter = document.querySelector('#filter')
+filter.addEventListener('change', function () {
+    let value = filter.value;
+    let filteredData = data.filter(item => item.category === value);
     main.innerHTML = "";
+    showData(filteredData);
+})
 
-    // Re-render the items with the sorted data
-    data.forEach((item, index) => {
-        let div = document.createElement("div");
-        div.classList.add("item");
-        div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" width="200px">
-            <h3>${item.name}</h3>
-            <p>$${item.price}</p>
-            <p>Rating: ${item.rating}</p>
-            <button onclick="addToCart(${item.id})">Add to Cart</button>
-        `;
-        main.appendChild(div);
+/* Search */
+let search = document.querySelector('#search');
+search.addEventListener('input', () => {
+    let query = search.value.toLowerCase();
+    let searchValue = data.filter((item) => {
+        return item.name.toLowerCase().includes(query);
     });
-});
-let button2 = document.querySelector("#btn2").addEventListener("click", () => {
-    data.sort((a, b) => {
-        return a.category.localeCompare(b.category);
-    });
-
-    // Clear the main container
     main.innerHTML = "";
-
-    // Re-render the items with the sorted data
-    data.forEach((item, index) => {
-        let div = document.createElement("div");
-        div.classList.add("item");
-        div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" width="200px">
-            <h3>${item.name}</h3>
-            <p>$${item.price}</p>
-            <p>Rating: ${item.rating}</p>
-            <button onclick="addToCart(${item.id})">Add to Cart</button>
-        `;
-        main.appendChild(div);
-    });
+    showData(searchValue);
 });
 
-let btn3 = document.querySelector('#btn3').addEventListener('click', () => {
-    data.sort((a, b) => {
-        // sort by name
-        let nameA = a.name.toUpperCase();
-        let nameB = b.name.toUpperCase();
-        if (nameA < nameB) return -1;
-        if (nameA > nameB) return 1;
-    });
+/* Cart */
 
-    // Clear the main container
-    main.innerHTML = "";
+let cart = [];
+function addToCart(index) {
+    cart.push(data[index]);
+    localStorage.setItem("products", JSON.stringify(cart));
+    // alert(`${data[index].name} added to cart!`);
+    if (container) {
+        getItem();
+    }
+}
 
-    // Re-render the items with the sorted data
-    data.forEach((item, index) => {
-        let div = document.createElement("div");
-        div.classList.add("item");
-        div.innerHTML = `
-            <img src="${item.image}" alt="${item.name}" width="200px">
-            <h3>${item.name}</h3>
-            <p>$${item.price}</p>
-            <p>Rating: ${item.rating}</p>
-            <button onclick="addToCart(${item.id})">Add to Cart</button>
-        `;
-        main.appendChild(div);
-    });
-});
-function addToCart(item) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Item added to cart!");
+// let container = document.querySelector(".container");
+
+function getItem() {
+    let parseData = JSON.parse(localStorage.getItem("products")) || [];
+    if (parseData.length > 0) {
+        parseData.forEach((item, index) => {
+            let div = document.createElement("div");
+            div.classList.add("item");
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" width="200px">
+                <h3>${item.name}</h3>
+                <p>${item.category}</p>
+                <p>$${item.price}</p>
+                <p>Rating: ${item.rating}</p>
+                <button onclick="removeFromCart(${index})">Remove from Cart</button>
+            `;
+            container.appendChild(div);
+        });
+    } else {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+    }
+
+}
+function removeFromCart(itemId) {
+    let parseData = JSON.parse(localStorage.getItem("products")) || [];
+    let updatedData = parseData.filter((item, index) => index !== itemId);
+    localStorage.setItem("products", JSON.stringify(updatedData));
+    container.innerHTML = "";
+    getItem();
 }
