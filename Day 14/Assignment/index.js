@@ -388,6 +388,7 @@ function confirmOrder() {
     }
 }
 
+
 function placeOrder() {
     let paymentMethod = document.querySelector('#payment').value;
     alert(`Order placed successfully! Payment method: ${paymentMethod}`);
