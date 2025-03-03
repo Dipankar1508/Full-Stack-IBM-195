@@ -21,7 +21,7 @@ let data = [
         "category": "Electronics",
         "price": 79.99,
         "rating": 4.7,
-        "image": "https://m.media-amazon.com/images/I/71LBvbVa95L._AC_UF1000,1000_QL80_.jpg"
+        "image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/keyboard/desktop-keyboard/w/l/6/gaming-keyboard-with-87-keys-rgb-backlit-with-suspension-keys-original-imagzcgwtrabgjna.jpeg?q=90&crop=false"
     },
     {
         "id": 4,
@@ -282,8 +282,15 @@ darkMode.addEventListener('click', () => {
 
 /* Cart */
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("products")) || [];
 function addToCart(index) {
+    // no duplicate elements
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === data[index].id) {
+            alert("Item already in cart!");
+            return;
+        }
+    }
     cart.push(data[index]);
     localStorage.setItem("products", JSON.stringify(cart));
     // alert(`${data[index].name} added to cart!`);
@@ -291,6 +298,7 @@ function addToCart(index) {
         getItem();
     }
 }
+
 
 // let container = document.querySelector(".container");
 
@@ -341,59 +349,3 @@ function removeFromCart(itemId) {
     container.innerHTML = "";
     getItem();
 }
-
-let buy = document.querySelector('.buy');
-buy.addEventListener('click', () => {
-    // confirmOrder();
-    console.log("Buy button clicked");
-});
-
-
-
-/*Checkout product */
-let order = document.querySelector('.order');
-
-function confirmOrder() {
-    let parseData = JSON.parse(localStorage.getItem("products")) || [];
-    if (parseData.length > 0) {
-        let card = document.createElement('div');
-        card.classList.add('card');
-        let totalPrice = 0;
-
-        let productList = parseData.map((item, index) => {
-            let itemPrice = convertToRupee(item.price);
-            totalPrice += itemPrice;
-            return `<p>${item.name} - ₹${itemPrice}</p>`;
-        }).join('');
-
-        card.innerHTML = `
-            <h2>Order Summary</h2>
-            ${productList}
-            <hr>
-            <h3>Total: ₹${totalPrice}</h3>
-            <label for="payment">Choose a payment method:</label>
-            <select required name="payment" id="payment">
-                <option value="upi" selected>UPI Payment</option>
-                <option value="card">Card Payment</option>
-                <option value="cod">Cash on Delivery</option>
-            </select>
-            <button onclick="placeOrder()">Place Order</button>
-        `;
-
-        // Clear previous order summary
-        // order.innerHTML = "";
-        order.appendChild(card);
-    } else {
-        order.innerHTML = "<p>Your cart is empty. Add some products to place an order!</p>";
-    }
-}
-
-
-function placeOrder() {
-    let paymentMethod = document.querySelector('#payment').value;
-    alert(`Order placed successfully! Payment method: ${paymentMethod}`);
-    localStorage.removeItem("products");
-    container.innerHTML = "<p>Your cart is empty.</p>";
-    order.innerHTML = "";
-}
-

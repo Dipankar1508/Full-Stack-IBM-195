@@ -8,7 +8,7 @@ arr.forEach((el, index) => { // (1st : element of the array ; 2nd Index of the a
 });
 
 // Map loop
-let ans = arr.map((el, index) => { // Will return only one thing at at time
+let ans = arr.map((el, index) => {
     return el;
     // return [el + index];
 })
