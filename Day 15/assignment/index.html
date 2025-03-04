@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="cart.html" style="color: aqua;">Go to Cart</a></li>
+        </ul>
+    </nav>
+    <!-- main section -->
+    <div class="cont">
+        <div class="section">
+            <input type="text" placeholder="Serach" id="search">
+            <select name="" id="sort">
+                <option value="Select" disabled selected>Sort</option>
+                <option value="asc">A - Z</option>
+                <option value="des">Z - A</option>
+            </select>
+            <select name="" id="filter">
+                <option value="all">All Categories</option>
+                <option value="Fashion" name="Fashion">Fashion</option>
+                <option value="Wearable" name="Wearable">Wearable</option>
+                <option value="Electronics" name="Electronics">Electronics</option>
+                <option value="Accessories name=" Accessories>Accessories</option>
+            </select>
+            <Select name="" id="price">
+                <option value="all">All Prices</option>
+                <option value="low">below 5000</option>
+                <option value="mid">5000 - 10000</option>
+                <option value="high">above 10000</option>
+            </Select>
+            <button id="dark">
+                <i class="fa-solid fa-moon"></i>&nbsp; Dark
+            </button>
+        </div>
+        <div class="main">
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Dipankar Sarkar - All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
+<script src="index.js"></script>

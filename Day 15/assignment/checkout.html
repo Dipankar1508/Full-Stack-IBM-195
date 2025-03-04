@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="cart.html" style="color: cyan;">Go to Cart</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" style="color: aqua;">Go to Home</a></li>
+        </ul>
+    </nav>
+    <div class="detail">
+        <h2>Customer Address</h2>
+        <div class="form">
+            <input type="text" id="name" name="name" placeholder="Full Name" required><br>
+            <input type="tel" id="phone" name="phone" placeholder="Phone no" required><br>
+            <input type="text" id="address" name="address" placeholder="Address" required><br>
+            <input type="text" id="city" name="city" placeholder="City" required><br>
+            <input type="text" id="street" name="street" placeholder="Street" required><br>
+            <input type="text" id="pin" name="pin" placeholder="Pin no" required><br>
+            <input type="text" id="state" name="state" placeholder="State" required><br>
+            <button onclick="confirmOrder()">Add Address</button>
+        </div>
+    </div>
+    <!-- <hr> -->
+    <div class="order">
+
+    </div>
+    <footer>
+        <p>&copy; Dipankar Sarkar - All rights reserved</p>
+    </footer>
+</body>
+
+</html>
+<script src="index.js"></script>
+<script src="checkout.js"></script>

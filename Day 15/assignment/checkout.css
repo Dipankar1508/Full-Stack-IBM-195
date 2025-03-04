@@ -1,0 +1,118 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 0;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+
+        li {
+            font-size: 18px;
+            height: 100%;
+
+            a {
+                text-decoration: none;
+                color: white;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+.detail {
+    padding: 40px 0;
+    width: 100%;
+    background-color: bisque;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.detail .form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    input,
+    button,
+    select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid grey;
+    }
+}
+
+.order {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.card {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 15px;
+    box-shadow: rgba(38, 57, 77, 0.603) 0px 20px 30px -10px;
+    border-radius: 10px;
+
+    p,
+    h3 {
+        margin: 7px;
+    }
+
+    button,
+    select {
+        margin-top: 5px;
+        width: 50%;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: rgb(177, 175, 175);
+        color: white;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+
+}
