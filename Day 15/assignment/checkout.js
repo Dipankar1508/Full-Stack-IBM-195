@@ -3,7 +3,6 @@ let card = document.createElement('div');
 card.classList.add('card');
 order.append(card);
 
-
 function confirmOrder() {
     let parseData = JSON.parse(localStorage.getItem("products")) || [];
     if (parseData.length > 0) {
