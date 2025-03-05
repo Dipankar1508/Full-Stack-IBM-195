@@ -84,9 +84,10 @@ nav {
         border-radius: 5px;
     }
 
-    h3{
+    h3 {
         margin: 10px;
     }
+
     p {
         font-size: 15px;
         margin: 8px;
@@ -110,7 +111,45 @@ footer {
     text-align: center;
     padding: 10px;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     font-weight: bold;
+    border-top: 1px solid white;
+}
 
+.loader-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(7, 5, 0);
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 10px solid var(--primary-color);
+    border-radius: 50%;
+    border-bottom: 10px solid white;
+    /* background-color: turquoise; */
+    animation: rotates 1.4s linear infinite, glow 1.4s alternate-reverse infinite;
+}
+
+@keyframes rotates {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(139, 146, 151, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 30px rgba(139, 146, 151, 0.5)
+    }
 }

@@ -6,6 +6,7 @@ async function fetchData() {
         let data = await fetch(`https://fakestoreapi.com/products/${i}`);
         response.push(await data.json());
     }
+    console.log(response.length);
 }
 
 /* Function to convert dollar to INR */
@@ -16,8 +17,8 @@ function dollarToINR(dollar) {
 /* Function to render items */
 async function showItem(data) {
     if (!data.length) return;
-
-    cont.innerHTML = ''; // Clear existing items
+    document.querySelector(".loader-cont").style.display = 'none';
+    cont.innerHTML = '';
 
     data.forEach((item) => {
         let newItem = document.createElement("div");
@@ -28,8 +29,8 @@ async function showItem(data) {
             <p>${item.title}</p>
             <p><b>&#8377;${dollarToINR(item.price)}</b></p>
             <p>Rating: ${item.rating.rate} ⭐</p>
-            <button>Add to Cart</button>
-            <button>View Details</button>
+            <button onclick="">Add to Cart</button>
+            <button onclick="viewDetails(${item.id})">View Details</button>
         `;
         cont.appendChild(newItem);
     });
@@ -37,9 +38,13 @@ async function showItem(data) {
 
 /* Initial data fetch and render */
 if (cont) {
-    fetchData()
-        .then(() => showItem(response))
-        .catch(err => console.error(err));
+    fetchData().then(() => {
+        setTimeout(() => {
+            showItem(response);
+        }, 300)
+    }).catch((err) => {
+        console.error(err);
+    })
 }
 
 /* Filter */
@@ -62,9 +67,9 @@ sort.addEventListener('change', () => {
     let value = sort.value;
     let sortedItems;
     if (value === 'asc') {
-        sortedItems = response.sort((a, b) => a.title.localeCompare(b.title));
+        sortedItems = [...response].sort((a, b) => a.title.localeCompare(b.title));
     } else {
-        sortedItems = response.sort((a, b) => b.title.localeCompare(a.title));
+        sortedItems = [...response].sort((a, b) => b.title.localeCompare(a.title));
     }
     showItem(sortedItems);
 });
@@ -99,3 +104,15 @@ search.addEventListener('input', () => {
         showItem(filteredItems);
     }, 300); // Adjust delay as needed
 });
+
+/* Cart */
+let cart = JSON.parse(localStorage.getItem("market")) || [];
+function viewDetails(productId) {
+    if (!cart.includes(productId)) {
+        cart.push(productId);
+        localStorage.setItem("market", JSON.stringify(cart));
+        alert("Product added to cart!");
+    } else {
+        alert("Product already in cart!");
+    }
+}

@@ -2,7 +2,7 @@ let cont = document.querySelector(".cont");
 
 let office = [];
 async function fetchData() {
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 10; i++) {
         let data = await fetch(`https://fakestoreapi.com/users/${i}`);
         office.push(await data.json());
     }
@@ -13,8 +13,8 @@ async function fetchData() {
 /* Function to render office */
 async function showperson(data) {
     if (!data.length) return;
-
-    cont.innerHTML = ''; // Clear existing office
+    document.querySelector(".loader-cont").style.display = 'none';
+    cont.innerHTML = '';
 
     data.forEach((person) => {
         let newperson = document.createElement("div");
@@ -25,32 +25,25 @@ async function showperson(data) {
             <p>Username :${person.username}</p>
             <p><b>E-mail :${person.email}</b></p>
             <p>Address: ${person.address.city}, ${person.address.street}</p>
-            <button>View Details</button>
+            <button onclick="viewDetails(${person.id})">View Details</button>
         `;
-
+        // console.log(person.name)
         cont.appendChild(newperson);
     });
 }
 
+
 /* Initial data fetch and render */
 if (cont) {
-    fetchData()
-        .then(() => showperson(office))
-        .catch(err => console.error(err));
+    fetchData().then(() => {
+        setTimeout(() => {
+            showperson(office);
+        }, 300)
+    }).catch((err) => {
+        console.error(err);
+    })
 }
 
-/* Filter */
-let filter = document.querySelector('#filter');
-filter.addEventListener('change', () => {
-    let value = filter.value;
-    let filteredoffice;
-    if (value === 'all') {
-        filteredoffice = office;
-    } else {
-        filteredoffice = office.filter(person => person.category === value);
-    }
-    showperson(filteredoffice);
-});
 
 /* Sort */
 let sort = document.querySelector('#sort');
@@ -59,31 +52,18 @@ sort.addEventListener('change', () => {
     let value = sort.value;
     let sortedoffice;
     if (value === 'asc') {
-        sortedoffice = office.sort((a, b) => a.title.localeCompare(b.title));
-    } else {
-        sortedoffice = office.sort((a, b) => b.title.localeCompare(a.title));
+        sortedoffice = office.slice().sort((a, b) => a.name.firstname.localeCompare(b.name.firstname));
+    } else if (value === 'des') {
+        sortedoffice = office.slice().sort((a, b) => b.name.firstname.localeCompare(a.name.firstname));
+    } else if (value === 'all') {
+        sortedoffice = office; // Show the original array as it is
     }
     showperson(sortedoffice);
+
 });
 
-/* Price */
-let price = document.querySelector('#price');
 
-price.addEventListener('change', () => {
-    let value = price.value;
-    let filteredoffice;
-    if (value === 'all') {
-        filteredoffice = office;
-    } else if (value === 'low') {
-        filteredoffice = office.filter(person => dollarToINR(person.price) <= 5000);
-    } else if (value === 'mid') {
-        filteredoffice = office.filter((person) => dollarToINR(person.price) > 5000 && person.price <= 20000);
-    } else if (value === 'high') {
-        filteredoffice = office.filter((person) => dollarToINR(person.price) > 20000);
-    }
-    showperson(filteredoffice);
-});
-
+/* Search */
 /* Search */
 let search = document.querySelector('#search');
 
@@ -92,7 +72,23 @@ search.addEventListener('input', () => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
         let query = search.value.toLowerCase();
-        let filteredoffice = office.filter(person => person.title.toLowerCase().includes(query));
+        let filteredoffice = office.filter(person => {
+            let fullName = (person.name.firstname || '') + ' ' + (person.name.lastname || '');
+            return fullName.toLowerCase().includes(query);
+        });
         showperson(filteredoffice);
     }, 300); // Adjust delay as needed
 });
+
+/* View Details */
+let selectedPeople = JSON.parse(localStorage.getItem('house')) || [];
+
+function viewDetails(personId) {
+    if (!selectedPeople.includes(personId)) {
+        selectedPeople.push(personId);
+        localStorage.setItem("house", JSON.stringify(selectedPeople));
+        alert("Person added to the list!");
+    } else {
+        alert("Person is already in the list!");
+    }
+}
