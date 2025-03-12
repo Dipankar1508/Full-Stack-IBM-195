@@ -123,10 +123,14 @@ footer {
 .loader {
     width: 60px;
     height: 60px;
-    border: 10px solid var(--primary-color);
+    /* border: 10px solid var(--primary-color); */
     border-radius: 50%;
     border-bottom: 10px solid white;
-    /* background-color: turquoise; */
+    border-top: 10px solid white;
+    background-color: black;
+    border-left: 10px solid cyan;
+    border-right: 10px solid cyan;
+
     animation: rotates 1.4s linear infinite, glow 1.4s alternate-reverse infinite;
 }
 
@@ -146,6 +150,36 @@ footer {
     }
 
     100% {
-        box-shadow: 0 0 30px rgba(139, 146, 151, 0.5)
+        box-shadow: 0 0 20px rgba(139, 146, 151, 0.9);
     }
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .section {
+    background-color: #1e1e1e;
+    border: 1px solid #ffffff;
+}
+
+.dark-mode .cont {
+    background-color: #1e1e1e;
+}
+
+.dark-mode .cont .item {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid white;
 }

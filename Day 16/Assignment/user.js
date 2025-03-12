@@ -91,4 +91,20 @@ function viewDetails(personId) {
     } else {
         alert("Person is already in the list!");
     }
+    window.location.href = `u_details.html?id=${personId}`;
+}
+
+/* Dark Mode */
+
+function darkMode() {
+    let element = document.body;
+    let darkBtn = document.getElementById("dark");
+    element.classList.toggle("dark-mode");
+
+    // Update button text/icon
+    if (element.classList.contains("dark-mode")) {
+        darkBtn.innerHTML = `<i class="fa-solid fa-sun"></i>&nbsp; Light`;
+    } else {
+        darkBtn.innerHTML = `<i class="fa-solid fa-moon"></i>&nbsp; Dark`;
+    }
 }

@@ -6,7 +6,7 @@ async function fetchData() {
         let data = await fetch(`https://fakestoreapi.com/products/${i}`);
         response.push(await data.json());
     }
-    console.log(response.length);
+    // console.log(response.length);
 }
 
 /* Function to convert dollar to INR */
@@ -114,5 +114,21 @@ function viewDetails(productId) {
         alert("Product added to cart!");
     } else {
         alert("Product already in cart!");
+    }
+    window.location.href = `p_detail.html?id=${productId}`;
+
+}
+// console.log(cart)
+
+function darkMode() {
+    let element = document.body;
+    let icon = document.getElementById("dark");
+
+    element.classList.toggle("dark-mode");
+
+    if (element.classList.contains("dark-mode")) {
+        icon.innerHTML = '<i class="fa-solid fa-sun"></i>&nbsp; Light';
+    } else {
+        icon.innerHTML = '<i class="fa-solid fa-moon"></i>&nbsp; Dark';
     }
 }
