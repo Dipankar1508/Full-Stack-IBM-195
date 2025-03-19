@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    .sec {
+        display: flex;
+        /* justify-content: space-around; */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row card-header">
+            <div class="col-12">
+                <h2 class="text-center my-4">Home</h2>
+            </div>
+        </div>
+
+        <div class=" sec">
+            <form action="/register" method="get">
+                <button id="signin" type="submit" class="btn btn-primary m-2">Register</button>
+            </form>
+            <br>
+            <form action="/login" method="get">
+                <button id="login" type="submit" class="btn btn-danger m-2">Login</button>
+            </form>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <p class="mt-4">Welcome to the home page of my website!</p>
+                <p>This is a simple HTML page with a heading and a paragraph.</p>
+                <p>Feel free to explore and modify the content.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="<KEY>"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
