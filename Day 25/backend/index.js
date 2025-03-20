@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome')
+    res.send('Welcome  --  /product')
 });
 
 app.get("/product", (req, res) => {

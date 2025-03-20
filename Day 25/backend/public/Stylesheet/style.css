@@ -1,3 +1,7 @@
+.header {
+    background-color: bisque;
+}
+
 .container {
     display: none;
 }
@@ -21,10 +25,20 @@
     }
 
     50% {
-        background-color: rgb(231, 228, 228);
+        background-color: rgb(241, 239, 239);
     }
 
     100% {
-        background-color: rgb(207, 206, 206);
+        background-color: rgb(236, 234, 234);
     }
+}
+
+.card-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.card p {
+    margin-bottom: 8px;
 }
