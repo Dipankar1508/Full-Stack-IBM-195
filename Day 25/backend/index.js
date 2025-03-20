@@ -3,7 +3,6 @@ const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
 const Product = require("./models/productSchema.js");
-const { render } = require("ejs");
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,7 +11,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); // Enable JSON parsing
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log('Connected to MongoDB');
